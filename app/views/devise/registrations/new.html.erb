@@ -8,29 +8,26 @@
       <h3>Sign up <small>it's free!</small></h3> 
 
         <!-- PASTE THE FORM HERE -->
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= bootstrap_form_for(resource, 
+            <%= bootstrap_form_for(resource, 
                        :as => resource_name, 
                        :url => registration_path(resource_name)) do |f| %>
 
-            <%= f.text_field :name, 
+             <%= f.text_field :name, 
                       placeholder: 'username (will be shown publicly)', 
                       class: 'form-control' %>
-            <%= f.text_field :email, 
+             <%= f.text_field :email, 
                       placeholder: 'email', 
                       class: 'form-control' %>
-            <%= f.password_field :password, 
+             <%= f.password_field :password, 
                                 placeholder: 'password', 
                                 class: 'form-control' %>
-            <%= f.password_field :password_confirmation, 
+             <%= f.password_field :password_confirmation, 
                                 placeholder: 'password confirmation', 
                                 class: 'form-control' %>
-            <%= f.submit 'Sign up', class: 'btn sign-up-button' %>
-            <% end %>
-          <% end %>
+             <%= f.submit 'Sign up', class: 'btn sign-up-button' %>
 
-<%= render "devise/shared/links" %>
-		
+          <% end %>
+          
     </div>
   </div>
 </div>
