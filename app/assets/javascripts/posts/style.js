@@ -16,7 +16,6 @@ $(document).on('turbolinks:load', function() {
         }	
     }
 
-
     $('#feed').on( 'mouseenter', '.single-post-list', function() {
         $(this).css('border-color', randomColor());	
     });
