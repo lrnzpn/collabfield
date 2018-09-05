@@ -2,6 +2,7 @@ require 'navigation_helper.rb'
 
 module ApplicationHelper
   include NavigationHelper
+  include PostsHelper
 end
 # module ApplicationHelper
 #     def collapsible_links_partial_path
