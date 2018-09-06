@@ -1,5 +1,5 @@
 class Private::Conversation < ApplicationRecord
-    self.table_name = 'private_conversation'
+    self.table_name = 'private_conversations'
 
     has_many :messages, 
          class_name: "Private::Message", 

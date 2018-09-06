@@ -40,6 +40,9 @@ class PostsController < ApplicationController
     
 
     private
+    def conversation_exist?
+        Private::Conversation.between_users(current_user.id, @post.user.id).present?
+    end
 
     def posts_for_branch(branch)
         @categories = Category.where(branch: branch)
@@ -64,7 +67,5 @@ class PostsController < ApplicationController
         }).call
       end
 
-    def conversation_exist?
-        Private::Conversation.between_users(current_user.id, @post.user.id).present?
-    end
+    
 end
