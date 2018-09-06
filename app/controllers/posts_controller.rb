@@ -4,19 +4,7 @@ class PostsController < ApplicationController
     def show
         @post = Post.find(params[:id])
     end
-
-    def hobby
-        posts_for_branch(params[:action])
-    end
-
-    def study
-        posts_for_branch(params[:action])
-    end
-
-    def team
-        posts_for_branch(params[:action])
-    end  
-
+    
     def new
         @branch = params[:branch]
         @categories = Category.where(branch: @branch)
@@ -31,6 +19,20 @@ class PostsController < ApplicationController
             redirect_to root_path
         end
     end
+
+    def hobby
+        posts_for_branch(params[:action])
+    end
+
+    def study
+        posts_for_branch(params[:action])
+    end
+
+    def team
+        posts_for_branch(params[:action])
+    end  
+
+    
     
 
     private

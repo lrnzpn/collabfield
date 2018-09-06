@@ -1,4 +1,3 @@
-
 class PostsForBranchService
     def initialize(params)
       @search = params[:search]
